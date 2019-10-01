@@ -3,11 +3,15 @@ defmodule ElixirForumScrapper.MixProject do
 
   def project do
     [
-      app: :elixir_forum_scrapper,
+      app: :mal_scrapper,
+      name: "MAL Scrapper",
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "My Anime List Scrapper",
+      aliases: aliases(),
+      package: package()
     ]
   end
 
@@ -25,4 +29,16 @@ defmodule ElixirForumScrapper.MixProject do
        {:floki, "~> 0.21.0"}
     ]
   end
+
+  defp package do
+    [
+      maintainers: [" ChrisTheWeird "],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/crisefd/mal_wrapper"}
+    ]
+end
+defp aliases do
+      [c: "compile"]
+end
+
 end
