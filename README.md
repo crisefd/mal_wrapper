@@ -20,25 +20,34 @@ end
 ## Usage
 
 ``` shell
-  MalScrapper.top <TYPE>
+  MalScrapper.get_top_anime <TYPE>
 ```
 
 ```<TYPE>``` can have all of these values: "airing", "upcoming", "tv", "movie", "ova", "special", "bypopularity", "favorite"
 
 ## Output
 ``` shell
-...
-%{
-    details: "|Movie (1 eps)|2020 - 2020|18,378 members",
-    name: "Fruits Basket 2nd Season",
-    rank: 46
+[
+  %{
+    details: %{
+      aired: "Apr 2009 - Jul 2010",
+      episodes: "TV (64 eps)",
+      members: "1,533,286 members"
+    },
+    name: "Fullmetal Alchemist: Brotherhood",
+    rank: 1
   },
   %{
-    details: "|TV (12 eps)|Oct 2019 -|17,125 members",
-    name: "Shirobako Movie",
-    rank: 47
+    details: %{
+      aired: "Apr 2011 - Sep 2011",
+      episodes: "TV (24 eps)",
+      members: "1,271,215 members"
+    },
+    name: "Steins;Gate",
+    rank: 2
   },
 ...
+]
 ```
 
 
