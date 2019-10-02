@@ -10,6 +10,8 @@ defmodule ElixirForumScrapper.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: "My Anime List Scrapper",
+      source_url: "https://github.com/crisefd/mal_wrapper",
+      docs: [extras: ["README.md"]],
       aliases: aliases(),
       package: package()
     ]
@@ -26,19 +28,20 @@ defmodule ElixirForumScrapper.MixProject do
   defp deps do
     [
        {:httpoison, "~> 1.5.0"},
-       {:floki, "~> 0.21.0"}
+       {:floki, "~> 0.21.0"},
+       {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
   end
 
   defp package do
     [
-      maintainers: [" ChrisTheWeird "],
+      maintainers: ["ChrisTheWeird"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/crisefd/mal_wrapper"}
     ]
 end
 defp aliases do
-      [c: "compile"]
+    [c: "compile"]
 end
 
 end
