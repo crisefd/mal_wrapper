@@ -2,6 +2,8 @@
 
 **My Anime List scrapper**
 
+Checkout MAL page [here](https://myanimelist.net/)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -22,6 +24,25 @@ end
 ```
 
 ```<TYPE>``` can have all of these values: "airing", "upcoming", "tv", "movie", "ova", "special", "bypopularity", "favorite"
+
+## Output
+``` shell
+...
+%{
+    details: "|Movie (1 eps)|2020 - 2020|18,378 members",
+    name: "Fruits Basket 2nd Season",
+    rank: 46
+  },
+  %{
+    details: "|TV (12 eps)|Oct 2019 -|17,125 members",
+    name: "Shirobako Movie",
+    rank: 47
+  },
+...
+```
+
+
+TODO: Add support for genre/person/character search
 
 
 

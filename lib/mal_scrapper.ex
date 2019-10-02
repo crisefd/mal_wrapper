@@ -1,5 +1,5 @@
 defmodule MalScrapper do
-    require Logger
+  require Logger
 
 
    @user_agent [{"User-agent", "MAL Wrapper"}]
@@ -32,12 +32,10 @@ defmodule MalScrapper do
    details = data 
              |> Floki.find("div.information, .di-ib mt4")
              |> get_anime_details()
-
    names = data 
               |> Floki.find(".hoverinfo_trigger ")  
               |> Floki.text(sep: "+")
               |> String.split("+")
-
    Enum.with_index(names) 
    |> Enum.zip(details) 
    |> Enum.map(fn {{name, index}, details} -> 
