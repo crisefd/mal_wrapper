@@ -1,6 +1,6 @@
 # MalScrapper
 
-**TODO: Add description**
+**My Anime List scrapper**
 
 ## Installation
 
@@ -14,6 +14,16 @@ def deps do
   ]
 end
 ```
+
+## Usage
+
+``` shell
+  MalScrapper.top <TYPE>
+```
+
+```<TYPE>``` can have all of these values: "airing", "upcoming", "tv", "movie", "ova", "special", "bypopularity", "favorite"
+
+
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
