@@ -96,9 +96,13 @@ defmodule MalScrapper do
     :Yuri => 34
   }
 
+  @type search_type() :: :all | :anime | :character | :person | :manga | :news | :featured | :forum | :club | :user
+
   @spec get_top_anime(valid_top_types(), Integer.t()) :: List.t()
 
   @spec get_anime_by_genre(genres(), Integer.t()) :: List.t()
+
+  @spec search(search_type(), String.t()) :: List.t()
 
   def get_top_anime(type, limit \\ 1) do
     AnimeData.top(type, limit)
@@ -106,5 +110,9 @@ defmodule MalScrapper do
 
   def get_anime_by_genre(genre, limit \\ 1) do
     AnimeData.genre({genre, @genres_map[genre]}, limit)
+  end
+
+  def search(type \\ :all, term) do
+    AnimeData.search(type, term)
   end
 end

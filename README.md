@@ -98,7 +98,15 @@ end
 ]
 ```
 
-TODO: Add support for person/character search
+### Search
+
+``` shell
+  MalScrapper.search <TYPE> <TERM>
+```
+`<GENRE_NAME>` Can take these values: 
+`:all` `:anime` `:character` `:person` `:manga` `:news` `:featured` `:forum ` `:club ` `:user`
+
+`<TERM>` can be any string
 
 
 

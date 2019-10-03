@@ -21,9 +21,14 @@ defmodule MalScrapper.AnimeData do
     |> handle_response(:genre, limit)
   end
 
+  def search(type, term) do
+    "#{@base_url}/search/prefix.json?type=#{type}&keyword=#{term}&v=1"
+    |> HTTPoison.get(@user_agent)
+    |> handle_response(:search, 0)
+  end
+
   defp handle_response({_, %{status_code: status_code, body: body}}, func_name, limit) do
     Logger.info("Got response: status code=#{status_code}")
-
     case check_for_errors(status_code, body, func_name, limit) do
       {:error, _} -> []
       parsed_data -> parsed_data
@@ -35,6 +40,10 @@ defmodule MalScrapper.AnimeData do
   defp check_for_errors(_, body, _func_name, _limit) do
     Logger.error(fn -> "Error response: #{inspect(body)}" end)
     {:error, body}
+  end
+
+  defp parse_data(data, :search, 0) do
+    data |> Poison.decode
   end
 
   defp parse_data(data, :top, limit) do
