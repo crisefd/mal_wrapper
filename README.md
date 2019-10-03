@@ -19,13 +19,15 @@ end
 
 ## Usage
 
+### Get top animes
+
 ``` shell
   MalScrapper.get_top_anime <TYPE>
 ```
 
-```<TYPE>``` can have all of these values: "airing", "upcoming", "tv", "movie", "ova", "special", "bypopularity", "favorite"
+```<TYPE>``` can have take these values: ```airing```, ```upcoming```, ```tv```, ```movie```, ```ova```, ```special```, ```bypopularity```, ```favorite```
 
-## Output
+### Output
 ``` shell
 [
   %{
@@ -49,9 +51,54 @@ end
 ...
 ]
 ```
+### Get anime by genre
+
+``` shell
+  MalScrapper.genre <GENRE_NAME>
+```
+```<GENRE_NAME>``` cant take these values:
+```:Action```, ```:Adventure ```,  ```:Cars ```, ```:Comedy ```, ```:Dementia```,
+```:Demons ```, ```:Drama ```, ```:Ecchi ```, ```:Fantasy ```, ```:Game ```, ```:Harem```,
+```:Hentai ```, ```:Historical ```, ```:Horror ```, ```:Josei ```, ```:Kids ```, 
+```:Magic```,  ```:"Martial Arts"```, ```:Mecha ```, ```:Military ```, ```:Music ```, 
+```:Mystery```, ```:Parody ```, ```:Police ```, ```:Psychological ```, ```:Romance ```, 
+```:Samurai```, ```:School ```, ```:"Sci-Fi" ```, ```:Seinen ```, ```:Shoujo ```, 
+```:"Shoujo Ai"```, ```:Shounen```, ```:"Shounen"```, ```:"Shounen Ai"```, 
+```:"Slice of Life"```, ```:Space```, ```:Sports```, ```:"Super Power"```, 
+```:Supernatural```, ```:Thriller```, ```:Vampire```, ```:Yaoi ```,  ```:Yuri```
 
 
-TODO: Add support for genre/person/character search
+### Output
+``` shell
+[
+...
+%{
+    description: "Yato and Yukine have finally mended their relationship as god and Regalia, and everyone has returned to their daily life. Yato remains a minor and unknown deity who continues taking odd jobs for five...read more.",
+    metadata: [
+      type: "TV",
+      episodes: "13",
+      score: "8.38",
+      start_date: "10-03-15",
+      members: "714,152"
+    ],
+    name: "Noragami Aragoto"
+  },
+  %{
+    description: "As summer arrives for the students at UA Academy, each of these superheroes-in-training puts in their best efforts to become renowned heroes. They head off to a forest training camp run by UA's pro he...read more.",
+    metadata: [
+      type: "TV",
+      episodes: "25",
+      score: "8.61",
+      start_date: "04-07-18",
+      members: "701,529"
+    ],
+    name: "Boku no Hero Academia 3rd Season"
+  },
+  ...
+]
+```
+
+TODO: Add support for person/character search
 
 
 
