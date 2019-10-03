@@ -25,7 +25,7 @@ end
   MalScrapper.get_top_anime <TYPE>
 ```
 
-```<TYPE>``` can have take these values: ```airing```, ```upcoming```, ```tv```, ```movie```, ```ova```, ```special```, ```bypopularity```, ```favorite```
+`<TYPE>` can have take these values: `airing`, `upcoming`, `tv`, `movie`, `ova`, `special`, `bypopularity`, `favorite`
 
 ### Output
 ``` shell
@@ -54,18 +54,18 @@ end
 ### Get anime by genre
 
 ``` shell
-  MalScrapper.genre <GENRE_NAME>
+  MalScrapper.get_anime_by_genre <GENRE_NAME>
 ```
-```<GENRE_NAME>``` cant take these values:
-```:Action```, ```:Adventure ```,  ```:Cars ```, ```:Comedy ```, ```:Dementia```,
-```:Demons ```, ```:Drama ```, ```:Ecchi ```, ```:Fantasy ```, ```:Game ```, ```:Harem```,
-```:Hentai ```, ```:Historical ```, ```:Horror ```, ```:Josei ```, ```:Kids ```, 
-```:Magic```,  ```:"Martial Arts"```, ```:Mecha ```, ```:Military ```, ```:Music ```, 
-```:Mystery```, ```:Parody ```, ```:Police ```, ```:Psychological ```, ```:Romance ```, 
-```:Samurai```, ```:School ```, ```:"Sci-Fi" ```, ```:Seinen ```, ```:Shoujo ```, 
-```:"Shoujo Ai"```, ```:Shounen```, ```:"Shounen"```, ```:"Shounen Ai"```, 
-```:"Slice of Life"```, ```:Space```, ```:Sports```, ```:"Super Power"```, 
-```:Supernatural```, ```:Thriller```, ```:Vampire```, ```:Yaoi ```,  ```:Yuri```
+`<GENRE_NAME>` cant take these values:
+`:Action`, `:Adventure `,  `:Cars `, `:Comedy `, `:Dementia`,
+`:Demons `, `:Drama `, `:Ecchi `, `:Fantasy `, `:Game `, `:Harem`,
+`:Hentai `, `:Historical `, `:Horror `, `:Josei `, `:Kids `, 
+`:Magic`,  `:"Martial Arts"`, `:Mecha `, `:Military `, `:Music `, 
+`:Mystery`, `:Parody `, `:Police `, `:Psychological `, `:Romance `, 
+`:Samurai`, `:School `, `:"Sci-Fi" `, `:Seinen `, `:Shoujo `, 
+`:"Shoujo Ai"`, `:Shounen`, `:"Shounen"`, `:"Shounen Ai"`, 
+`:"Slice of Life"`, `:Space`, `:Sports`, `:"Super Power"`, 
+`:Supernatural`, `:Thriller`, `:Vampire`, `:Yaoi `,  `:Yuri`
 
 
 ### Output
