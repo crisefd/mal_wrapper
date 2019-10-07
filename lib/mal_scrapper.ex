@@ -1,5 +1,11 @@
 defmodule MalScrapper do
+  @moduledoc """
+    Scrapper for My Anime List.
+    It provides basic functionalities to query data from the site
+  """
   alias MalScrapper.AnimeData
+
+
 
   @type valid_top_types() ::
           :airing | :upcoming | :tv | :movie | :ova | :special | :bypopularity | :favorite
@@ -104,14 +110,93 @@ defmodule MalScrapper do
 
   @spec search(search_type(), String.t()) :: List.t()
 
+
+  @doc """
+    Gets top anime by the specified type
+
+    Returns a list of maps with the data
+
+    ## Examples:
+    iex> AnimeData.top :upcoming
+    [
+      %{
+        details: %{
+          aired: "Apr 2009 - Jul 2010",
+          episodes: "TV (64 eps)",
+          members: "1,533,286 members"
+        },
+        name: "Fullmetal Alchemist: Brotherhood",
+        rank: 1
+      },
+      ...
+      ]
+
+  """
   def get_top_anime(type, limit \\ 1) do
     AnimeData.top(type, limit)
   end
 
+  @doc """ 
+    Gets anime by genre
+
+    Returns a list of maps with the data
+
+    ## Examples:
+    iex> MalScrapper.get_anime_by_genre :Action
+    [
+      %{
+        description: "Yato and Yukine have finally mended their relationship as god..."
+        metadata: [
+          type: "TV",
+          episodes: "13",
+          score: "8.38",
+          start_date: "10-03-15",
+          members: "714,152"
+        ],
+        name: "Noragami Aragoto"
+      },
+      ...
+      ]
+
+  """
   def get_anime_by_genre(genre, limit \\ 1) do
     AnimeData.genre({genre, @genres_map[genre]}, limit)
   end
 
+  @doc """
+    REST Quick search feature
+
+    Returns the matching elements
+
+    ## Example:
+    iex> MalScrapper.search :person, "hanazawa"
+    {:ok,
+      %{
+        "categories" => [
+          %{
+             "items" => [
+               %{
+                 "es_score" => 4.724693,
+                 "id" => 185,
+                 "image_url" => "https://cdn.myanimelist.net/images/voiceactors/2/41455.jpg",
+                 "name" => "Hanazawa, Kana",
+                 "payload" => %{
+                 "alternative_name" => "HanaKana; KanaHana",
+                 "birthday" => "Feb 25, 1989",
+                 "favorites" => 72213,
+                 "thumbnail_url" => "https://cdn.myanimelist.net/r/116x76/images/voiceactors/2/41455.jpg?s=d9914bb7de8c6ceec02dc05bac8d36ea",
+                 "type" => "person",
+                 "url" => "https://myanimelist.net/people/185/Kana_Hanazawa"
+                },
+                ...
+              ],
+            ]
+          }
+        ]
+      }
+      }
+
+  """
   def search(type \\ :all, term) do
     AnimeData.search(type, term)
   end

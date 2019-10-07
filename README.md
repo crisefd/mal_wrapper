@@ -25,7 +25,7 @@ end
   MalScrapper.get_top_anime <TYPE>
 ```
 
-`<TYPE>` can have take these values: `airing`, `upcoming`, `tv`, `movie`, `ova`, `special`, `bypopularity`, `favorite`
+`<TYPE>` can have take these values: `:airing`, `:upcoming`, `:tv`, `:movie`, `:ova`, `:special`, `:bypopularity`, `:favorite`
 
 ### Output
 ``` shell

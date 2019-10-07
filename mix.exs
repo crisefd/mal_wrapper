@@ -1,11 +1,11 @@
-defmodule ElixirForumScrapper.MixProject do
+defmodule MalScrapper.MixProject do
   use Mix.Project
 
   def project do
     [
       app: :mal_scrapper,
       name: "MAL Scrapper",
-      version: "0.1.2",
+      version: "0.1.3",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -36,7 +36,7 @@ defmodule ElixirForumScrapper.MixProject do
 
   defp package do
     [
-      maintainers: ["ChrisTheWeird"],
+      maintainers: ["Cristhian Fuertes"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/crisefd/mal_wrapper"}
     ]
