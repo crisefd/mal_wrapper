@@ -104,11 +104,11 @@ defmodule MalScrapper do
 
   @type search_type() :: :all | :anime | :character | :person | :manga | :news | :featured | :forum | :club | :user
 
-  @spec get_top_anime(valid_top_types(), Integer.t()) :: List.t()
+  @spec get_top_anime(valid_top_types(), integer) :: list
 
-  @spec get_anime_by_genre(genres(), Integer.t()) :: List.t()
+  @spec get_anime_by_genre(genres(), integer) :: list
 
-  @spec search(search_type(), String.t()) :: List.t()
+  @spec search(search_type(), binary) :: list
 
 
   @doc """

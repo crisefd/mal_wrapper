@@ -28,6 +28,7 @@ defmodule MalScrapper.MixProject do
   defp deps do
     [
        {:httpoison, "~> 1.5.0"},
+       {:dialyxir, git: "https://github.com/jeremyjh/dialyxir"},
        {:poison, "~> 4.0"},
        {:floki, "~> 0.21.0"},
        {:ex_doc, "~> 0.21", only: :dev, runtime: false}
